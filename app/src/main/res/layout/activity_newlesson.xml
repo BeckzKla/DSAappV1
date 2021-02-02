@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dsaActivies.newLesson_Activity"
+    android:background="@color/colorBackground">
+
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="7"
+        android:columnCount="1"
+        android:layout_margin="5dp"
+        android:alignmentMode="alignMargins"
+        android:layout_gravity="center_horizontal"
+        android:columnOrderPreserved="false">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:paddingStart="30dp"
+                app:icon="@drawable/ic_gobackarrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/goBackButton"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.844"
+                app:layout_constraintStart_toEndOf="@+id/goBackButton">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Nuova Lezione:"
+                    android:textColor="@color/icon_color"
+                    android:textSize="24dp" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_margin="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ScrollView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Croso:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/course"
+                    android:layout_width="186dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:background="@drawable/custom_input"
+                    android:paddingStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Corso"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_margin="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Per ragazzi:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/typeSU"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/custom_input"
+                    android:hint="Studente"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/grey"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/typeSS"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/custom_input"
+                    android:hint="Università"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/grey"
+                    android:textSize="20dp" />
+
+                <!--Altro modo di fare selzeione università o Superiori
+                <Spinner
+                    android:layout_width="186dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/custom_input"
+                    android:paddingStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="23dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/typeStudent"
+                    />
+                    -->
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_margin="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Data:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="186dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Data"
+                    android:paddingStart="60dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:background="@drawable/custom_input"
+                    android:id="@+id/dateReserv"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_margin="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Da:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="186dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="ora"
+                    android:paddingStart="80dp"
+
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/timeStart"
+                    android:background="@drawable/custom_input"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_margin="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="A:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="186dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="ora"
+                    android:paddingStart="80dp"
+
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/timeEnd"
+                    android:background="@drawable/custom_input"/>
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <Button
+            android:id="@+id/createBTN"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Crea"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="140dp"/>
+
+
+
+
+
+    </GridLayout>
+</ScrollView>

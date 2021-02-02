@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dsaappv1">
+
+    <permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DSAappV1">
+        <activity android:name=".dsaActivies.Reservation_Activity"></activity>
+        <activity android:name=".Intro_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dsaActivies.All_Tutor_Activity" />
+        <activity android:name=".dsaActivies.myReservation" />
+        <activity android:name=".dsaActivies.courses_Activity" />
+        <activity android:name=".CreateNewProfile.CreateProfile2" />
+        <activity android:name=".dsaActivies.myProfile_Activity" />
+        <activity android:name=".dsaActivies.Info_Activity" />
+        <activity android:name=".dsaActivies.Calender_Activity" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".CreateNewProfile.createProfile" />
+        <activity android:name=".accessActivity"></activity>
+        <activity android:name=".dsaActivies.newLesson_Activity" />
+    </application>
+
+</manifest>

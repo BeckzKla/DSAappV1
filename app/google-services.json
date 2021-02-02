@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "920012682689",
+    "firebase_url": "https://digital-student-academy.firebaseio.com",
+    "project_id": "digital-student-academy",
+    "storage_bucket": "digital-student-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920012682689:android:1f575edb6ada2cfb99ab40",
+        "android_client_info": {
+          "package_name": "com.example.dsaappv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920012682689-mg36ohdui68f507ti5ubuqs2t89qa60g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dsaappv1",
+            "certificate_hash": "981b0a8e3945a7b05e7247e7b2f5c993c094ddfa"
+          }
+        },
+        {
+          "client_id": "920012682689-72vfofsh3a0pok861chlefu14urjddtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk2Wv5GJEztdUiTntbyAtVWEbedEUNUlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920012682689-72vfofsh3a0pok861chlefu14urjddtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
