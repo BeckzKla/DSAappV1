@@ -69,7 +69,17 @@ public class Reservation_Activity extends AppCompatActivity {
                 arrayAdapter.updateLesson();
                 Constants.lessonsTrasp.updateLesson();
 
-                Constants.myUser.addReservation(Constants.lessonsTrasp.getIdLesson());
+                //Constants.resrTrasp.updateReserv();;
+
+                DatabaseReference myRefTemp = FirebaseDatabase.getInstance().getReference("Reservations");
+
+                myRefTemp.child(Constants.resrTrasp.getIdReservation()).setValue(Constants.resrTrasp);
+
+                Constants.myUser.addReservation(Constants.resrTrasp.getIdReservation());
+
+
+                Constants.myUser.updateUser();
+
 
                 Intent intent=new Intent(Reservation_Activity.this, courses_Activity.class);
                 finish();

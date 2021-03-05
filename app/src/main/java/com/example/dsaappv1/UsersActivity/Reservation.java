@@ -72,10 +72,6 @@ public class Reservation {
         this.date=lesson.getDate();
         this.course=lesson.getCourse();
         this.idReservation= idReservation;
-
-
-
-
         //myRefTemp.child(this.idReservation).setValue("ciaociccio");
 
     }

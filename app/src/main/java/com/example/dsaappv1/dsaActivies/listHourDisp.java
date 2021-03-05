@@ -105,7 +105,7 @@ public class listHourDisp extends ArrayAdapter<String> {
 
 
 
-        for(int i =0; i<listCheckBox.size();i++)
+        for(int i =0; i<Constants.lessonsTrasp.getListHourDisp().size();i++)
         {
             try{
                 if( Constants.lessonsTrasp.getIsFreeHours(i))
@@ -177,13 +177,7 @@ public class listHourDisp extends ArrayAdapter<String> {
                 DatabaseReference myRefTemp = FirebaseDatabase.getInstance().getReference("Reservations");
                 String idReservation = myRefTemp.push().getKey();
 
-                Reservation newResv = new Reservation(Constants.lessonsTrasp, Constants.myUser.getFullName(), startH, finishH, idReservation);
-
-                newResv.updateReserv();
-
-                Constants.myUser.addReservation(newResv.getIdReservation());
-                Constants.myUser.updateUser();
-
+                Constants.resrTrasp = new Reservation(Constants.lessonsTrasp, Constants.myUser.getFullName(), startH, finishH, idReservation);
             }
 
 

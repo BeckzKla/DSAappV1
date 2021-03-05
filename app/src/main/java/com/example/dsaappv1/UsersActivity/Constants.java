@@ -13,14 +13,10 @@ public class Constants {
 
     public static String IDusers;
 
-    public static listLessonAdapter allLesson;
-
-
-    public enum levelStudy {Hschool, University, NON }
-
     public static Lessons lessonsTrasp;
 
-    public static List<Lessons> myLesson;
+    public static Reservation resrTrasp;
+
 
 
 
