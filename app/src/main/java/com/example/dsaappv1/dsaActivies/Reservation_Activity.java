@@ -15,6 +15,8 @@ import com.example.dsaappv1.Dashboard;
 import com.example.dsaappv1.R;
 import com.example.dsaappv1.UsersActivity.Constants;
 import com.example.dsaappv1.UsersActivity.listLessonAdapter;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
@@ -28,6 +30,8 @@ public class Reservation_Activity extends AppCompatActivity {
     private ListView allHourDisp;
     private Button reservBtn;
     private listHourDisp arrayAdapter;
+
+
 
 
     @Override
@@ -60,8 +64,12 @@ public class Reservation_Activity extends AppCompatActivity {
         reservBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //vado ad aggiorna re
+
                 arrayAdapter.updateLesson();
                 Constants.lessonsTrasp.updateLesson();
+
+                Constants.myUser.addReservation(Constants.lessonsTrasp.getIdLesson());
 
                 Intent intent=new Intent(Reservation_Activity.this, courses_Activity.class);
                 finish();
@@ -76,4 +84,6 @@ public class Reservation_Activity extends AppCompatActivity {
 
         allHourDisp.setAdapter(arrayAdapter);
     }
+
+
 }

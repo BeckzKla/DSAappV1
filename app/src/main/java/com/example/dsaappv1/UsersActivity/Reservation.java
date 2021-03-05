@@ -17,11 +17,12 @@ import java.util.List;
 
 public class Reservation {
 
+
     private String idLesson;
     private String nameTutor;
-    private int hour;
     private String date;
     private String timeS;
+    private String timeE;
     private String idReservation;
     private String course;
 
@@ -49,14 +50,34 @@ public class Reservation {
         this.date = date;
     }
 
-    public Reservation(String idLesson, String nameTutor, int hour, String TimeS, String idReservation, String date, String course) {
+    public Reservation(String idLesson, String nameTutor, String  TimeE, String TimeS, String date, String course) {
         this.idLesson = idLesson;
         this.nameTutor = nameTutor;
-        this.hour = hour;
+        this.timeE = TimeE;
         this.timeS= TimeS;
-        this.idReservation= idReservation;
         this.date=date;
         this.course=course;
+
+
+
+        //updateReserv();
+
+    }
+
+    public Reservation(Lessons lesson, String nameTutor, String TimeS, String TimeE, String idReservation) {
+        this.idLesson = lesson.getIdLesson();
+        this.nameTutor = nameTutor;
+        this.timeE = TimeE;
+        this.timeS= TimeS;
+        this.date=lesson.getDate();
+        this.course=lesson.getCourse();
+        this.idReservation= idReservation;
+
+
+
+
+        //myRefTemp.child(this.idReservation).setValue("ciaociccio");
+
     }
 
     public String getIdReservation() {
@@ -94,17 +115,17 @@ public class Reservation {
         this.nameTutor = nameTutor;
     }
 
-    public int getHour() {
-        return hour;
+    public String getTimeE() {
+        return timeE;
     }
 
-    public void setHour(int hour) {
-        this.hour = hour;
+    public void setTimeE(String timeE) {
+        this.timeE = timeE;
     }
 
     public void updateReserv()
     {
-        DatabaseReference myRefTemp = FirebaseDatabase.getInstance().getReference("Reservations");
+        DatabaseReference myRefTemp = FirebaseDatabase.getInstance().getReference("Reservation");
 
         myRefTemp.child(idReservation).setValue(this);
     }

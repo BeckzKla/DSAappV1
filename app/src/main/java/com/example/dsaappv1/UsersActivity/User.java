@@ -24,34 +24,23 @@ import java.util.ListIterator;
 import static java.lang.Integer.parseInt;
 
 public class User{
+
+    // per descrivere ogni utente vado usare deiversi parametri
+
+    // email nome data del compleanno e il tipo di Utente ( universitario o delle superiori)
     private String email,fullName, datebrtd, typeU;
+
+    //in più uso il suo numero di telefono e una stringa identificativa dell'utente
     private String tellefNumber, IdUser;
+
+    //una lista che contiene tutte le lezioni che quel utente deve svolgere da Tutor
     private List<String> myLessons = new ArrayList<String>();
 
+    //una lista che contiene tutte le lezioni del quel utente deve svolgere come Studente
     private List<String> myReservetion = new ArrayList<String>();
 
-    public List<String> getMyLessons() {
-        return myLessons;
-    }
 
-
-
-    public List<String> getMyReservetion() {
-        return myReservetion;
-    }
-
-    public void setMyReservetion(List<String> myReservetion) {
-        this.myReservetion = myReservetion;
-    }
-
-    public String getIdUser() {
-        return IdUser;
-    }
-
-    public void setIdUser(String idUser) {
-        IdUser = idUser;
-    }
-
+    //Costruttori della classe
     public User(String email, String fullName, String datebrtd, String typeU, String tellefNumber, List<String> myLessons,
                 List<String> myReservation , String idUser) {
         this.email = email;
@@ -64,15 +53,6 @@ public class User{
         this.IdUser = idUser;
     }
 
-    public void setMyLessons(List<String> myLessons) {
-        this.myLessons = myLessons;
-    }
-
-    public User() {
-
-    }
-
-
     public User(Context context, String email, String fullName, String datebrtd, String typeU, String tellefNumber, String idUser) {
         this.email = email;
         this.fullName = fullName;
@@ -82,6 +62,44 @@ public class User{
         this.IdUser = idUser;
 
     }
+
+    public User() {
+
+    }
+
+
+
+
+
+    // i vari get e set ai diversi campi che servono quindi per iteragire con i parametri di questo utente
+
+    public List<String> getMyLessons() {
+        return myLessons;
+    }
+
+    public List<String> getMyReservetion() {
+        return myReservetion;
+    }
+
+    public void setMyReservetion(List<String> myReservetion) {
+        this.myReservetion = myReservetion;
+    }
+
+
+    public String getIdUser() {
+        return IdUser;
+    }
+
+    public void setIdUser(String idUser) {
+        IdUser = idUser;
+    }
+
+
+
+    public void setMyLessons(List<String> myLessons) {
+        this.myLessons = myLessons;
+    }
+
 
     public String getEmail() {
         return email;
@@ -124,13 +142,7 @@ public class User{
     }
 
 
-    public void addLesson(String idLessons)
-    {
-        this.myLessons.add(idLessons);
-    }
-
-    public void addReservation(String idReservation){this.myReservetion.add(idReservation);}
-
+    //due funzioni che mi servono per caricare e scaricare un utente dal database
     public void updateUser()
     {
         DatabaseReference myRefTemp = FirebaseDatabase.getInstance().getReference("users");
@@ -150,5 +162,21 @@ public class User{
         }
 
     }
+
+
+    //due funzioni che mi servono per aggiugnere le prenotazioni e le lezioni alle relative liste
+    public void addLesson(String idLessons)
+    {
+        this.myLessons.add(idLessons);
+        updateUser();
+    }
+
+    public void addReservation(String idReservation){
+
+        this.myReservetion.add(idReservation);
+        updateUser();
+    }
+
+
 
 }

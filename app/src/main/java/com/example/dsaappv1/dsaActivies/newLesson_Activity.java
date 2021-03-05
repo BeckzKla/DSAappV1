@@ -179,7 +179,7 @@ public class newLesson_Activity extends AppCompatActivity{
 
 
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(newLesson_Activity.this, new TimePickerDialog.OnTimeSetListener() {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(newLesson_Activity.this, android.R.style.Theme_Holo_Dialog_MinWidth , new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int HOUR, int MINUTE) {
 
@@ -188,12 +188,7 @@ public class newLesson_Activity extends AppCompatActivity{
                     }
                 }, hour, minute, true);
 
-
-
                 timePickerDialog.show();
-
-
-
             }
 
         }
@@ -211,7 +206,7 @@ public class newLesson_Activity extends AppCompatActivity{
 
 
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(newLesson_Activity.this, new TimePickerDialog.OnTimeSetListener() {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(newLesson_Activity.this, android.R.style.Theme_Holo_Dialog_MinWidth,  new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int HOUR, int MINUTE) {
 

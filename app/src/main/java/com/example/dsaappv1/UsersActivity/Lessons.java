@@ -103,6 +103,8 @@ public class Lessons {
         return this.isFreeHours.get(pos);
     }
 
+    public List<Boolean> getListHourDisp(){return this.isFreeHours;}
+
     public Boolean getUniversStudent() {
         return isUniversStudent;
     }
@@ -249,6 +251,27 @@ public class Lessons {
 
     public boolean isReservable() {
         return isReservable;
+    }
+
+
+    //utilizzo la funzione succesiva per avere la stringa corrispondente a una certa ora
+    public String returnHourStringFormeStart(int offset)
+    {
+        String start;
+
+        //per prima cosa vado a convertira la stinga in una data
+        SimpleDateFormat format = new SimpleDateFormat("HH:mm");
+
+        Date date1 = format.parse(timeS, new ParsePosition(0));
+        //adesso estraggo l'ora che mi interessa
+        int hourS= date1.getHours();
+
+        //ed estraggo anche il minuto dell'inizio della prenotazione
+        int minute = date1.getMinutes();
+
+        start= Integer.toString(hourS+offset)+":"+Integer.toString(minute);
+
+        return start;
     }
 }
 

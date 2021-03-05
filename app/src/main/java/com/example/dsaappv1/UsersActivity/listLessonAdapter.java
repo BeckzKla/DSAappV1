@@ -45,8 +45,6 @@ public class listLessonAdapter extends ArrayAdapter<Lessons>
 
     private int hourReserv;
 
-    int res=5;
-
     public listLessonAdapter(Context contex,int resorse,  List<Lessons> lessons) {
         super(contex,resorse,lessons);
         this.contex = contex;
@@ -127,7 +125,7 @@ public class listLessonAdapter extends ArrayAdapter<Lessons>
         for(Lessons l : lessons)
         {
 
-            if(!l.getUniversStudent())
+            if(l.getUniversStudent())
             {
                 Toast.makeText(this.contex, "classe:"+l.getUniversStudent(),Toast.LENGTH_SHORT).show();
                 lessonsHschool.add(l);
@@ -145,7 +143,7 @@ public class listLessonAdapter extends ArrayAdapter<Lessons>
         for(Lessons l : lessons)
         {
 
-            if(l.getUniversStudent())
+            if(!l.getUniversStudent())
             {
                 Toast.makeText(this.contex, "classe:"+l.getUniversStudent(),Toast.LENGTH_SHORT).show();
                 lessonsHschool.add(l);
